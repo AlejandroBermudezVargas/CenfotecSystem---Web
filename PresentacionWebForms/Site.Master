@@ -18,6 +18,7 @@
     <link rel="stylesheet" href="Content/jquery-jvectormap-1.2.2.css">
     <link rel="stylesheet" href="Content/AdminLTE.min.css">
     <link rel="stylesheet" href="Content/_all-skins.css">
+    <link rel="stylesheet" href="Content/Site.css">
 </head>
 <body class="hold-transition skin-purple sidebar-mini">
     <form runat="server">
@@ -38,6 +39,11 @@
                 <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
                 <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
                 <asp:ScriptReference Name="WebFormsBundle" />
+                <asp:ScriptReference Path="Scripts/jQuery-2.1.4.min.js" />
+                <asp:ScriptReference Path="Scripts/bootstrap3-wysihtml5.all.min.js" />
+                <asp:ScriptReference Path="Scripts/jquery.slimscroll.min.js" />
+                <asp:ScriptReference Path="Scripts/fastclick.min.js" />
+                <asp:ScriptReference Path="Scripts/app.min.js" />
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
@@ -145,11 +151,6 @@
                 <strong>Copyright &copy; 2015 <a href="https://www.ucenfotec.ac.cr">Cenfotec</a>.</strong> All rights reserved.
             </footer>
         </div>
-        <script src="Scripts/jQuery-2.1.4.min.js"></script>    
-        <script src="Scripts/bootstrap3-wysihtml5.all.min.js"></script>
-        <script src="Scripts/jquery.slimscroll.min.js"></script>
-        <script src="Scripts/fastclick.min.js"></script>
-        <script src="Scripts/app.min.js"></script>
     </form>
 </body>
 </html>
