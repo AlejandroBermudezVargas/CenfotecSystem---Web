@@ -9,6 +9,7 @@ using PresentacionWebForms;
 using System.Configuration;
 using Newtonsoft.Json;
 using System.Data;
+using PresentacionWebForms.Models;
 
 namespace PresentacionWebForms.CenfotecSite.Evaluations
 {
@@ -26,29 +27,29 @@ namespace PresentacionWebForms.CenfotecSite.Evaluations
 
         private void bindData()
         {
-            GridView1.DataSource = Session["EvaluationsTable"];
-            GridView1.DataBind();
+            GridEvaluationsData.DataSource = Session["EvaluationsTable"];
+            GridEvaluationsData.DataBind();
         }
 
         private void loadEvaluationsData(){
-            //RestClient client = new RestClient(ConfigurationManager.AppSettings["endpoint"]);
-            //RestRequest request = new RestRequest("ducks", Method.GET);
-            //var response = client.Execute(request) as RestResponse;
-            //string json = response.Content;
-            //List<Duck> duckList = JsonConvert.DeserializeObject<List<Duck>>(json);
+            RestClient client = new RestClient(ConfigurationManager.AppSettings["endpoint"]);
+            RestRequest request = new RestRequest("Evaluations", Method.GET);
+            var response = client.Execute(request) as RestResponse;
+            string json = response.Content;
+            List<Evaluation> evaluations = JsonConvert.DeserializeObject<List<Evaluation>>(json);
 
             DataTable tableEvaluations = new DataTable("evaluations");
-            tableEvaluations.Columns.AddRange(new DataColumn[4]{
-                new DataColumn("name", typeof(string)),
-                new DataColumn("evaluado", typeof(string)),
-                new DataColumn("estado", typeof(string)),
-                new DataColumn("contador", typeof(string)),
+            tableEvaluations.Columns.AddRange(new DataColumn[2]{
+                new DataColumn("id_evaluacion", typeof(string)),
+                new DataColumn("porcentaje_desactivacion", typeof(string))
             });
 
-            tableEvaluations.Rows.Add("Eval 1", "Jose Romero", "Activa", "16/30");
-            tableEvaluations.Rows.Add("Eval 1", "Alvaro Cordero", "Activa", "16/30");
-            tableEvaluations.Rows.Add("Eval 1", "Kemly Cordoba", "Activa", "16/30");
-            tableEvaluations.Rows.Add("Eval 1", "Alvaro Ospina", "Activa", "16/30");
+
+            foreach (var evaluation in evaluations)
+            {
+                tableEvaluations.Rows.Add(evaluation.id_evaluacion, evaluation.porcentaje_desactivacion);
+            }
+            
 
             Session["EvaluationsTable"] = tableEvaluations;
         }

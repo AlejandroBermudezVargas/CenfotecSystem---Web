@@ -13,12 +13,10 @@
     <br />
     <section class="content">
         <div class="table-responsive">
-            <asp:GridView ID="GridView1" CssClass="table table-hover" runat="server" >
+            <asp:GridView ID="GridEvaluationsData" CssClass="table table-striped table-hover" runat="server" AllowCustomPaging="True" AutoGenerateColumns="False" GridLines="None" >
                 <Columns>
-                    <asp:BoundField DataField="name" HeaderText="Nombre" />
-                    <asp:BoundField DataField="evaluado" HeaderText="Evaluado" />
-                    <asp:BoundField DataField="estado" HeaderText="Estado" />
-                    <asp:BoundField DataField="contador" HeaderText="Realizadas/Faltantes" />
+                    <asp:BoundField DataField="id_evaluacion" HeaderText="Id evaluacion"/>
+                    <asp:BoundField DataField="porcentaje_desactivacion" HeaderText="Evaluado" />
                     <asp:CommandField ShowEditButton="True" ShowSelectButton="True"  HeaderText="Acciones"/>
                 </Columns>
             </asp:GridView>
