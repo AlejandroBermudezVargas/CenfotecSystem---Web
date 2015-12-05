@@ -12,6 +12,7 @@ namespace PresentacionWebForms.Models
         }
     
         public int id_pregunta { get; set; }
+        public string pregunta1 { get; set; }
         public int id_respuesta { get; set; }
         public Answer respuesta { get; set; }
     }
