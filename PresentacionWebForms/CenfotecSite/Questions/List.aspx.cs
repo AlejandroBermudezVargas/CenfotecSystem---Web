@@ -20,7 +20,6 @@ namespace PresentacionWebForms.CenfotecSite.Questions
             {
                 loadQuestionsData();
             }
-
             bindData();
         }
 
@@ -38,20 +37,26 @@ namespace PresentacionWebForms.CenfotecSite.Questions
             string json = response.Content;
             List<Question> questions = JsonConvert.DeserializeObject<List<Question>>(json);
 
-            DataTable tableQuestions = new DataTable("questions");
-            tableQuestions.Columns.AddRange(new DataColumn[2]{
-                new DataColumn("id_pregunta", typeof(string)),
-                new DataColumn("pregunta1", typeof(string))
-            });
-
-
-            foreach (var question in questions)
+            if (questions.Count > 0)
             {
-                tableQuestions.Rows.Add(question.id_pregunta, question.pregunta1);
+                msjListaVacia.Style.Add("display", "none");
+
+                DataTable tableQuestions = new DataTable("questions");
+                tableQuestions.Columns.AddRange(new DataColumn[3]{
+                new DataColumn("id_pregunta", typeof(int)),
+                new DataColumn("pregunta1", typeof(string)),
+                new DataColumn("peso", typeof(int))
+            });
+                foreach (var question in questions)
+                {
+                    tableQuestions.Rows.Add(question.id_pregunta, question.pregunta1, question.peso);
+                }
+                Session["QuestionsTable"] = tableQuestions;
             }
-
-
-            Session["QuestionsTable"] = tableQuestions;
+            else
+            {
+                msjListaVacia.Style.Remove("display");
+            }
         }
     }
 }

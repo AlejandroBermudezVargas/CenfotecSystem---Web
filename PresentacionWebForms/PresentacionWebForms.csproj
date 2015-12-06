@@ -106,6 +106,7 @@
     <Content Include="About.aspx" />
     <Content Include="CenfotecSite\Evaluations\List.aspx" />
     <Content Include="CenfotecSite\index.aspx" />
+    <Content Include="CenfotecSite\Questions\Form.aspx" />
     <Content Include="CenfotecSite\Questions\List.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\AdminLTE.min.css" />
@@ -279,6 +280,13 @@
     <Compile Include="CenfotecSite\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CenfotecSite\Questions\Form.aspx.cs">
+      <DependentUpon>Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CenfotecSite\Questions\Form.aspx.designer.cs">
+      <DependentUpon>Form.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CenfotecSite\Questions\List.aspx.cs">
       <DependentUpon>List.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -303,7 +311,6 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\Answer.cs" />
     <Compile Include="Models\Evaluation.cs" />
     <Compile Include="Models\Question.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

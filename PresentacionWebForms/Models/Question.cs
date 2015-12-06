@@ -7,13 +7,14 @@ namespace PresentacionWebForms.Models
 {
     public class Question
     {
-        public Question()
+        public Question(string ppregunta, int ppeso)
         {
+            this.pregunta1 = ppregunta;
+            this.peso = ppeso;
         }
     
         public int id_pregunta { get; set; }
         public string pregunta1 { get; set; }
-        public int id_respuesta { get; set; }
-        public Answer respuesta { get; set; }
+        public int peso { get; set; }
     }
 }
