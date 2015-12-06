@@ -110,6 +110,7 @@
     <Content Include="CenfotecSite\Evaluations\List.aspx" />
     <Content Include="CenfotecSite\index.aspx" />
     <Content Include="CenfotecSite\Kpi\kpiProductos.aspx" />
+    <Content Include="CenfotecSite\Kpi\KpiProspectos.aspx" />
     <Content Include="CenfotecSite\Questions\List.aspx" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\AdminLTE.min.css" />
@@ -290,6 +291,13 @@
     </Compile>
     <Compile Include="CenfotecSite\Kpi\kpiProductos.aspx.designer.cs">
       <DependentUpon>kpiProductos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CenfotecSite\Kpi\KpiProspectos.aspx.cs">
+      <DependentUpon>KpiProspectos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CenfotecSite\Kpi\KpiProspectos.aspx.designer.cs">
+      <DependentUpon>KpiProspectos.aspx</DependentUpon>
     </Compile>
     <Compile Include="CenfotecSite\Questions\List.aspx.cs">
       <DependentUpon>List.aspx</DependentUpon>
