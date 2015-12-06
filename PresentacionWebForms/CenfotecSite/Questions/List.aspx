@@ -11,17 +11,17 @@
     </section>
     <br />
     <section class="content">
-        <div class="table-responsive">
-            <asp:GridView ID="GridQuestionsData" CssClass="table table-striped table-hover" runat="server" AllowCustomPaging="True" AutoGenerateColumns="False" GridLines="None" >
-                <Columns>
-                    <asp:BoundField DataField="id_pregunta" HeaderText="Id"/>
-                    <asp:BoundField DataField="pregunta1" HeaderText="Preguntas" />
-                    <asp:CommandField ShowEditButton="True" ShowSelectButton="True"  HeaderText="Acciones"/>
-                </Columns>
-            </asp:GridView>
-        </div>
+        <asp:Label id="msjListaVacia" runat="server">No hay preguntas creadas</asp:Label>
+        <asp:GridView ID="GridQuestionsData" CssClass="table table-striped table-hover" runat="server" AllowCustomPaging="True" AutoGenerateColumns="False" GridLines="None" >
+            <Columns>
+                <asp:BoundField DataField="id_pregunta" HeaderText="Id"/>
+                <asp:BoundField DataField="pregunta1" HeaderText="Pregunta" />
+                <asp:BoundField DataField="peso" HeaderText="Peso" />
+                <asp:CommandField ShowEditButton="True"  HeaderText="Acciones" ShowDeleteButton="True"/>
+            </Columns>
+        </asp:GridView>
         <div class="text-right">
-            <a href="../../CenfotecSite/Questions/Form.aspx" class="btn btn-info">Nueva pregunta</a>
+            <a href="../../CenfotecSite/Questions/Form.aspx" class="btn btn-primary">Nueva pregunta</a>
         </div>
     </section>
 </asp:Content>
