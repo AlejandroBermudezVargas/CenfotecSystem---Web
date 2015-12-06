@@ -38,3 +38,7 @@
     height: 600px;
     overflow: scroll;
 }
+
+.borderless td, .borderless th {
+    border: none;
+}
