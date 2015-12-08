@@ -10,9 +10,14 @@ namespace PresentacionWebForms.Models
         public Question()
         {
         }
-    
+
+        public Question(int pid)
+        {
+            id_pregunta = pid;
+        }
+
         public int id_pregunta { get; set; }
-        public int id_respuesta { get; set; }
-        public Answer respuesta { get; set; }
+        public string pregunta1 { get; set; }
+        public int peso { get; set; }
     }
 }
