@@ -38,3 +38,30 @@
     height: 600px;
     overflow: scroll;
 }
+
+
+
+#feedback {
+    font-size: 1em;
+}
+
+.selectable .ui-selecting {
+    background: #6a3da9;
+}
+
+.selectable .ui-selected {
+    background: #522f83;
+    color: white;
+}
+
+.selectable {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    height: 24em;
+    overflow: scroll;
+}
+
+    .selectable li {
+        font-size: 1em;
+    }
