@@ -65,13 +65,17 @@ namespace PresentacionWebForms.CenfotecSite.Evaluations
             Template template = new Template();
             template.nombre = txtNombre.Text;
             template.descripcion = txtDescripcion.Value;
-            string[] ids= HiddenFieldPreguntas.Value.Split(',');
+            char[] splits = {',',' '};
+            string[] ids= HiddenFieldPreguntas.Value.Split(splits);
             foreach (string id in ids)
             {
-                template.preguntas.Add(new Question(Convert.ToInt32(id)));
+                if (!id.Equals("")) template.preguntas.Add(new Question(Convert.ToInt32(id)));
             }
-            
-
+            RestClient client = new RestClient(ConfigurationManager.AppSettings["endpoint"]);
+            RestRequest request = new RestRequest("Templates", Method.POST);
+            request.RequestFormat = DataFormat.Json;
+            request.AddBody(template);
+            var response = client.Execute(request) as RestResponse;
         }
     }
 }
