@@ -13,23 +13,22 @@
     <br />
     <section class="content">
         <div class="form">
+            <asp:HiddenField ID="HiddenFieldPreguntas" runat="server" value=""/><!-- Aqui estaran los ids de las preguntas -->
             <div class="form-group">
-                <label>Profesor:</label>
-                <asp:DropDownList ID="stlProfesores" runat="server" CssClass="form-control">
-
-                </asp:DropDownList>
+                <label>Nombre:</label>
+                <asp:TextBox ID="txtNombre" runat="server" CssClass="form-control"></asp:TextBox>
             </div>
             <div class="form-group">
-                <label for="txtPorcentaje">Porcentaje de desactivación</label>
-                <asp:TextBox ID="txtPorcentaje" runat="server" CssClass="form-control"></asp:TextBox>
+                <label for="txtPorcentaje">Descripción</label>
+                <textarea id="txtDescripcion" cols="20" rows="2" class="form-control" runat="server"></textarea>
             </div>
             <div class="form-group">
-                <label for="sltCurso">Curso:</label>
-                <asp:DropDownList ID="sltCurso" runat="server" CssClass="form-control">
-                    <asp:ListItem></asp:ListItem>
-                </asp:DropDownList>
+                <label for="sltCursos">Preguntas:</label>
+                <ol id="olQuestions" class="selectable list-group" runat="server"></ol>
             </div>
-            <input type="button" class="btn btn-primary" value="Continuar">
+            <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-success" OnClick="btnGuardar_Click"/>
+            <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-primary" />
         </div>
+        <script src="../../Scripts/createEvaluation.js"></script>
     </section>
 </asp:Content>

@@ -125,6 +125,7 @@
     <Content Include="Content\img\portfolio\5.jpg" />
     <Content Include="Content\img\portfolio\6.jpg" />
     <Content Include="Content\jquery-jvectormap-1.2.2.css" />
+    <Content Include="Content\jquery-ui.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\_all-skins.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -177,6 +178,7 @@
     <Content Include="Scripts\bootstrap3-wysihtml5.all.min.js" />
     <Content Include="Scripts\cbpAnimatedHeader.js" />
     <Content Include="Scripts\classie.js" />
+    <Content Include="Scripts\createEvaluation.js" />
     <Content Include="Scripts\creative.js" />
     <Content Include="Scripts\fastclick.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -184,6 +186,7 @@
     <Content Include="Scripts\jQuery-2.1.4.min.js" />
     <Content Include="Scripts\jquery-jvectormap-1.2.2.min.js" />
     <Content Include="Scripts\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
     <Content Include="Scripts\jquery.easing.min.js" />
     <Content Include="Scripts\jquery.fittext.js" />
     <Content Include="Scripts\jquery.js" />
@@ -306,6 +309,7 @@
     <Compile Include="Models\Answer.cs" />
     <Compile Include="Models\Evaluation.cs" />
     <Compile Include="Models\Question.cs" />
+    <Compile Include="Models\Template.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">
