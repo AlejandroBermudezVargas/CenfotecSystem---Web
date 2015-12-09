@@ -12,7 +12,7 @@
     <br />
     <section class="content">
         <asp:Label id="msjListaVacia" runat="server">No hay preguntas creadas</asp:Label>
-        <asp:GridView ID="GridQuestionsData" CssClass="table table-striped table-hover" runat="server" AllowCustomPaging="True" AutoGenerateColumns="False" GridLines="None" >
+        <asp:GridView ID="GridQuestionsData" CssClass="table table-striped table-hover" runat="server" AllowCustomPaging="True" AutoGenerateColumns="False" GridLines="None" OnRowEditing="GridQuestionsData_RowEditing" >
             <Columns>
                 <asp:BoundField DataField="id_pregunta" HeaderText="Id"/>
                 <asp:BoundField DataField="pregunta1" HeaderText="Pregunta" />
