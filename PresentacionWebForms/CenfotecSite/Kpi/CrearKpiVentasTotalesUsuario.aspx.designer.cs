@@ -10,16 +10,34 @@
 namespace PresentacionWebForms.CenfotecSite.Kpi {
     
     
-    public partial class KpiVentas {
+    public partial class CrearKpiVentas {
         
         /// <summary>
-        /// DropDownIndicadores control.
+        /// dropDownSelectUsuario control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownIndicadores;
+        protected global::System.Web.UI.WebControls.DropDownList dropDownSelectUsuario;
+        
+        /// <summary>
+        /// metaVentas control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox metaVentas;
+        
+        /// <summary>
+        /// descripcionVentasTotales control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox descripcionVentasTotales;
         
         /// <summary>
         /// generateKpiVentas control.

@@ -23,10 +23,11 @@ namespace PresentacionWebForms.CenfotecSite.Kpi
         private void loadIndicadoresVentas() 
         {
             List<string> listIndicadores = new List<string>();
-            listIndicadores.Add("Total de Ventas");
-            listIndicadores.Add("Monto Total Vendido");
-            listIndicadores.Add("Producto de Mayor Venta");
-            listIndicadores.Add("Mes de Mayor Venta");
+            listIndicadores.Add("Ventas Totales por Usuario");
+            listIndicadores.Add("Ventas Totales");
+            listIndicadores.Add("Montos Totales Por usuario");
+            listIndicadores.Add("Montos Totales");
+            listIndicadores.Add("Montos por Periodo");
 
             foreach (var indicador in listIndicadores)
             {
@@ -41,7 +42,7 @@ namespace PresentacionWebForms.CenfotecSite.Kpi
             var response = client.Execute(request) as RestResponse;
             string json = response.Content;
 
-            ResultsData.Controls.Add(new Literal { Text = json });
+            //ResultsData.Controls.Add(new Literal { Text = json });
         }
 
         private void calculateTotalMontoVentas()
@@ -51,14 +52,14 @@ namespace PresentacionWebForms.CenfotecSite.Kpi
             var response = client.Execute(request) as RestResponse;
             string json = response.Content;
 
-            ResultsData.Controls.Add(new Literal { Text = json });
+            //ResultsData.Controls.Add(new Literal { Text = json }); to be remove
         }
 
         protected void generateKpiVentas_Click(object sender, EventArgs e)
         {
-            if (DropDownIndicadores.SelectedValue == "Total de Ventas")
+            if (DropDownIndicadores.SelectedValue == "Ventas Totales por Usuario")
             {
-                calculateTotalVentas();
+                Response.Redirect("CrearKpiVentasTotalesUsuario.aspx");
             }
             else if (DropDownIndicadores.SelectedValue == "Monto Total Vendido") 
             {

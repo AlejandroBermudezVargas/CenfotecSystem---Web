@@ -43,8 +43,11 @@ namespace PresentacionWebForms.CenfotecSite.Kpi
         private void loadInicadores()
         {
             List<string> listIndicadores = new List<string>();
-            listIndicadores.Add("Mas vendido");
-            listIndicadores.Add("Menos vendido");
+            listIndicadores.Add("Ventas Totales por Usuario");
+            listIndicadores.Add("Ventas Totales");
+            listIndicadores.Add("Montos Totales Por usuario");
+            listIndicadores.Add("Montos Totales");
+            listIndicadores.Add("Montos por Periodo");
             
             foreach (var indicador in listIndicadores)
             {

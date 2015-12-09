@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="KpiVentas.aspx.cs" Inherits="PresentacionWebForms.CenfotecSite.Kpi.KpiVentas" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="CrearKpiVentasTotalesUsuario.aspx.cs" Inherits="PresentacionWebForms.CenfotecSite.Kpi.CrearKpiVentas" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <section class="content-header">
         <h1>Kpi
@@ -14,10 +14,26 @@
         <div class="table-responsive">        
             <table style="width:100%;" class="table borderless">
                 <tr>
-                    <td style="width: 115px">Indicadores:</td>
+                    <td style="width: 115px">Usuario:</td>
                     <td style="width: 237px">                    
-                       <asp:DropDownList ID="DropDownIndicadores"  CssClass="btn btn-default dropdown-toggle" runat="server" >
-                       </asp:DropDownList>
+                        <asp:DropDownList ID="dropDownSelectUsuario" runat="server">
+                        </asp:DropDownList>
+
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="width: 115px">Meta de Ventas:</td>
+                    <td style="width: 237px">                    
+                        <asp:TextBox ID="metaVentas" runat="server"></asp:TextBox>
+
+                    </td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td style="width: 115px">Descripcion:</td>
+                    <td style="width: 237px">                    
+                        <asp:TextBox ID="descripcionVentasTotales" runat="server" Height="42px" Width="228px"></asp:TextBox>
 
                     </td>
                     <td>&nbsp;</td>
