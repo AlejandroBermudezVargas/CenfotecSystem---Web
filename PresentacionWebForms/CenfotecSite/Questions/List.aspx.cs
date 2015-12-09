@@ -20,6 +20,7 @@ namespace PresentacionWebForms.CenfotecSite.Questions
             {
                 loadQuestionsData();
             }
+            Session["IdQuestionEdit"] = null;
             bindData();
         }
 
@@ -57,6 +58,13 @@ namespace PresentacionWebForms.CenfotecSite.Questions
             {
                 msjListaVacia.Style.Remove("display");
             }
+        }
+
+        protected void GridQuestionsData_RowEditing(object sender, GridViewEditEventArgs e)
+        {
+            Session["IdQuestionEdit"] = GridQuestionsData.Rows[e.NewEditIndex].Cells[0].Text;
+            Response.BufferOutput = true;
+            Response.Redirect("../../CenfotecSite/Questions/Form.aspx");
         }
     }
 }
