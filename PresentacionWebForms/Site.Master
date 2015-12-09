@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="Content/AdminLTE.min.css">
     <link rel="stylesheet" href="Content/_all-skins.css">
     <link rel="stylesheet" href="Content/Site.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 </head>
 <body class="hold-transition skin-purple sidebar-mini">
     <form runat="server">
@@ -39,7 +40,8 @@
                 <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
                 <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
                 <asp:ScriptReference Name="WebFormsBundle" />
-                <asp:ScriptReference Path="Scripts/jQuery-2.1.4.min.js" />
+                <asp:ScriptReference Path="//code.jquery.com/jquery-1.10.2.js" />
+                <asp:ScriptReference Path="//code.jquery.com/ui/1.11.4/jquery-ui.js" />
                 <asp:ScriptReference Path="Scripts/bootstrap3-wysihtml5.all.min.js" />
                 <asp:ScriptReference Path="Scripts/jquery.slimscroll.min.js" />
                 <asp:ScriptReference Path="Scripts/fastclick.min.js" />
