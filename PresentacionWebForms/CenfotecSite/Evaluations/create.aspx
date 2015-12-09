@@ -12,6 +12,14 @@
     </section>
     <br />
     <section class="content">
+        <asp:Panel id="panelConfirmacion" runat="server" CssClass="alert alert-info">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close" style="text-decoration:none">&times;</a>
+            <strong>Éxito!</strong> La pregunta ha sido almacenada.
+        </asp:Panel>
+        <asp:Panel id="panelError" runat="server" CssClass="alert alert-danger">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close" style="text-decoration:none">&times;</a>
+            <strong>Error!</strong> No se han podido cargar los datos.
+        </asp:Panel>
         <div class="form">
             <asp:HiddenField ID="HiddenFieldPreguntas" runat="server" value=""/><!-- Aqui estaran los ids de las preguntas -->
             <div class="form-group">
@@ -27,7 +35,7 @@
                 <ol id="olQuestions" class="selectable list-group" runat="server"></ol>
             </div>
             <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="btn btn-success" OnClick="btnGuardar_Click"/>
-            <asp:Button ID="btnCancelar" runat="server" Text="Cancelar" CssClass="btn btn-primary" />
+            <a href ="List.aspx" class="btn btn-primary">Cancelar</a>
         </div>
         <script src="../../Scripts/createEvaluation.js"></script>
     </section>

@@ -67,3 +67,8 @@
     .selectable li {
         font-size: 1em;
     }
+
+.alert {
+    display:none !important;
+}
+

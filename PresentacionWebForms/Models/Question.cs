@@ -12,6 +12,9 @@ namespace PresentacionWebForms.Models
             this.pregunta1 = ppregunta;
             this.peso = ppeso;
         }
+        public Question()
+        {
+        }
 
         public Question(int pid)
         {

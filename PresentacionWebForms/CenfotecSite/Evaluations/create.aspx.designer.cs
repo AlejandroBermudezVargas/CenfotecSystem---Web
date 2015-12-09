@@ -13,6 +13,24 @@ namespace PresentacionWebForms.CenfotecSite.Evaluations {
     public partial class create {
         
         /// <summary>
+        /// panelConfirmacion control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panelConfirmacion;
+        
+        /// <summary>
+        /// panelError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Panel panelError;
+        
+        /// <summary>
         /// HiddenFieldPreguntas control.
         /// </summary>
         /// <remarks>
@@ -56,14 +74,5 @@ namespace PresentacionWebForms.CenfotecSite.Evaluations {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnGuardar;
-        
-        /// <summary>
-        /// btnCancelar control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnCancelar;
     }
 }
