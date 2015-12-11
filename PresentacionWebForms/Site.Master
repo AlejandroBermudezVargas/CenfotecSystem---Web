@@ -66,14 +66,15 @@
                                 <ul class="dropdown-menu">
                                     <li class="user-header">
                                         <img src="http://loremflickr.com/320/240/abstract" class="img-circle" alt="User Image">
-                                        <p>
+                                        <p runat="server" id="datosUser">
+                                            
                                             Nombre de usuario - rol
                                             <small>Fecha de nacimiento</small>
                                         </p>
                                     </li>
                                     <li class="user-footer">
                                         <div class="pull-right">
-                                            <a href="#" class="btn btn-default btn-flat">Cerrar sesion</a>
+                                            <asp:LinkButton runat="server" class="btn btn-default btn-flat" onClick="cerrarSesion" ID="logOut">Cerrar sesion</asp:LinkButton>
                                         </div>
                                     </li>
                                 </ul>
@@ -89,25 +90,25 @@
                             <img src="http://loremflickr.com/160/160/abstract" class="img-circle" alt="User Image">
                         </div>
                         <div class="pull-left info">
-                            <p>Usuario logeado</p>
+                            <p runat="server" id="UserLoged">Usuario logeado</p>
                             <a href="#"><i class="fa fa-circle text-success"></i>Online</a>
                         </div>
                     </div>
 
-                    <ul class="sidebar-menu">
-                        <li class="header">Menu</li>
-                        <li class="treeview active">
-                            <a href="#">
+                    <ul class="sidebar-menu" runat="server">
+                        <li class="header" id="menuPrinc" runat="server">Menu</li>
+                        <li class="treeview active" runat="server">
+                            <a runat="server" href="#" ID="botonMenuInicio">
                                 <i class="fa fa-home"></i>
                                 <span>Inicio</span>
                             </a>
                         </li>
-                        <li class="treeview">
+                        <li class="treeview" runat="server" id="botonMenuEvaluaciones" visible="false">
                             <a href="#">
                                 <i class="fa fa-edit"></i><span>Evaluaciones</span>
                             </a>
                         </li>
-                        <li class="treeview">
+                        <li class="treeview" runat="server" id="botonMenuKpis" visible="false">
                             <a href="#">
                                 <i class="fa fa-pie-chart"></i>
                                 <span>KPI</span>
@@ -120,13 +121,13 @@
                                 <li><a href="#"><i class="fa fa-circle-o"></i>Crear KPI de evaluaciones</a></li>
                             </ul>
                         </li>
-                        <li class="treeview">
+                        <li class="treeview" runat="server" id="botonMenuReportes" visible="false">
                             <a href="#">
                                 <i class="fa fa-table"></i><span>Reportes</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="#"><i class="fa fa-circle-o"></i>Ganancias de agente</a></li>
+                                <li><asp:LinkButton runat ="server" href="#"><i class="fa fa-circle-o"></i>Ganancias de agente</asp:LinkButton></li>
                                 <li><a href="#"><i class="fa fa-circle-o"></i>Ventas agente por año</a></li>
                                 <li><a href="#"><i class="fa fa-circle-o"></i>Ganancias agente por año</a></li>
                                 <li><a href="#"><i class="fa fa-circle-o"></i>Reporte de evaluaciones</a></li>
@@ -137,7 +138,9 @@
                                 <li><a href="#"><i class="fa fa-circle-o"></i>Reporte bitacora</a></li>
 
                             </ul>
+                            </li>
                     </ul>
+
                 </section>
             </aside>
             <div class="content-wrapper">

@@ -17,5 +17,15 @@ namespace PresentacionWebForms
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
         }
+
+        void Session_End(object sender, EventArgs e)
+        {
+            Session.Remove("User");
+        }
+
+        void Session_Start(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
+        }
     }
 }
