@@ -70,6 +70,7 @@ namespace PresentacionWebForms.CenfotecSite.Evaluations
             List<Question> questions = JsonConvert.DeserializeObject<List<Question>>(response.Content);
 
             HtmlGenericControl li;
+            if (questions!=null)
             foreach (Question question in questions)
             {
                 li = new HtmlGenericControl("li");
@@ -114,10 +115,23 @@ namespace PresentacionWebForms.CenfotecSite.Evaluations
                 if (!id.Equals("")) template.preguntas.Add(new Question(Convert.ToInt32(id)));
             }
             RestClient client = new RestClient(ConfigurationManager.AppSettings["endpoint"]);
-            RestRequest request = new RestRequest("Templates", Method.POST);
-            request.RequestFormat = DataFormat.Json;
-            request.AddBody(template);
-            var response = client.Execute(request) as RestResponse;
+            if (Session["IdTemplateEdit"] == null)
+            {//POST
+                RestRequest request = new RestRequest("Templates", Method.POST);
+                request.RequestFormat = DataFormat.Json;
+                request.AddBody(template);
+                var response = client.Execute(request) as RestResponse;
+                if (response.StatusCode.Equals(System.Net.HttpStatusCode.Created)) Response.Redirect("List.aspx");
+            }
+            else
+            {//UPDATE
+                RestRequest request = new RestRequest("Templates/" + Session["IdTemplateEdit"].ToString(), Method.PUT);
+                template.id_plantilla = Convert.ToInt32(Session["IdTemplateEdit"].ToString());
+                request.RequestFormat = DataFormat.Json;
+                request.AddBody(template);
+                var response = client.Execute(request) as RestResponse;
+                if (response.StatusCode.Equals(System.Net.HttpStatusCode.NoContent)) Response.Redirect("List.aspx");
+            }
         }
     }
 }
