@@ -23,7 +23,7 @@ namespace PresentacionWebForms.CenfotecSite.Evaluations
             }
 
             Session["IdTemplateEdit"] = null;
-            
+
             bindData();
         }
 
@@ -33,33 +33,41 @@ namespace PresentacionWebForms.CenfotecSite.Evaluations
             GridEvaluationsData.DataBind();
         }
 
-        private void loadEvaluationsData(){
+        private void loadEvaluationsData()
+        {
             RestClient client = new RestClient(ConfigurationManager.AppSettings["endpoint"]);
             RestRequest request = new RestRequest("Templates", Method.GET);
             var response = client.Execute(request) as RestResponse;
             string json = response.Content;
             List<Template> evaluations = JsonConvert.DeserializeObject<List<Template>>(json);
 
-            DataTable tableEvaluations = new DataTable("templates");
-            tableEvaluations.Columns.AddRange(new DataColumn[3]{
+            if (evaluations != null && evaluations.Count > 0)
+            {
+                DataTable tableEvaluations = new DataTable("templates");
+                tableEvaluations.Columns.AddRange(new DataColumn[3]{
                 new DataColumn("id_plantilla", typeof(string)),
                 new DataColumn("nombre", typeof(string)),
                 new DataColumn("descripcion", typeof(string))
             });
-
-
-            foreach (var evaluation in evaluations)
-            {
-                tableEvaluations.Rows.Add(evaluation.id_plantilla,evaluation.nombre, evaluation.descripcion);
+                foreach (var evaluation in evaluations)
+                {
+                    tableEvaluations.Rows.Add(evaluation.id_plantilla, evaluation.nombre, evaluation.descripcion);
+                }
+                Session["EvaluationsTable"] = tableEvaluations;
+                lblMensajeListaVacia.Style.Add("display", "none");
             }
-            Session["EvaluationsTable"] = tableEvaluations;
+            else
+            {
+                lblMensajeListaVacia.Style.Remove("display");
+            }
+
         }
 
         protected void GridEvaluationsData_RowEditing(object sender, GridViewEditEventArgs e)
         {
             Session["IdTemplateEdit"] = GridEvaluationsData.Rows[e.NewEditIndex].Cells[0].Text;
             Response.BufferOutput = true;
-            Response.Redirect("../../CenfotecSite/Evaluations/create.aspx");
+            Response.Redirect("../../CenfotecSite/Templates/create.aspx");
         }
     }
 }

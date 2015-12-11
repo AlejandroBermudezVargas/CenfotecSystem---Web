@@ -38,7 +38,7 @@ namespace PresentacionWebForms.CenfotecSite.Questions
             string json = response.Content;
             List<Question> questions = JsonConvert.DeserializeObject<List<Question>>(json);
 
-            if (questions.Count > 0)
+            if (questions != null)
             {
                 msjListaVacia.Style.Add("display", "none");
 

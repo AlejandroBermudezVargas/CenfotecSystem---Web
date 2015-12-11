@@ -13,6 +13,15 @@ namespace PresentacionWebForms.CenfotecSite.Evaluations {
     public partial class List {
         
         /// <summary>
+        /// lblMensajeListaVacia control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblMensajeListaVacia;
+        
+        /// <summary>
         /// GridEvaluationsData control.
         /// </summary>
         /// <remarks>

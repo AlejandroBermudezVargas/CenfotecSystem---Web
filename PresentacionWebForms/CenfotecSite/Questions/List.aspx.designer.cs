@@ -19,7 +19,7 @@ namespace PresentacionWebForms.CenfotecSite.Questions {
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label msjListaVacia;
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl msjListaVacia;
         
         /// <summary>
         /// GridQuestionsData control.

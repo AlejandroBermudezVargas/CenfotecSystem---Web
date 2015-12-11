@@ -13,6 +13,7 @@
     <br />
     <section class="content">
         <div class="table-responsive">
+            <h3 id="lblMensajeListaVacia" class="text-danger" runat="server">No hay plantillas para mostrar</h3>
             <asp:GridView ID="GridEvaluationsData" CssClass="table table-striped table-hover" runat="server" AllowCustomPaging="True" AutoGenerateColumns="False" GridLines="None" OnRowEditing="GridEvaluationsData_RowEditing" >
                 <Columns>
                     <asp:BoundField DataField="id_plantilla" HeaderText="ID" />
