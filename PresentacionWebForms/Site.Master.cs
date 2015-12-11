@@ -46,21 +46,24 @@ namespace PresentacionWebForms
             User user = (User)Session["User"];
             foreach (Permission permiso in user.rol.permisos)
             {
-                switch (permiso.nombre)
-                {
-                    case "kpis":
-                        botonMenuKpis.Visible = true;
-                        break;
-                    case "reportes":
-                        botonMenuReportes.Visible = true;
-                        break;
-                    case "evaluaciones":
-                        botonMenuEvaluaciones.Visible = true;
-                        break;
-                    case "preguntas":
-                        botonMenuEvaluaciones.Visible = true;
-                        break;
+                if (permiso != null) {
+                    switch (permiso.nombre)
+                    {
+                        case "kpis":
+                            botonMenuKpis.Visible = true;
+                            break;
+                        case "reportes":
+                            botonMenuReportes.Visible = true;
+                            break;
+                        case "evaluaciones":
+                            botonMenuEvaluaciones.Visible = true;
+                            break;
+                        case "preguntas":
+                            botonMenuEvaluaciones.Visible = true;
+                            break;
+                    }
                 }
+
             }
 
         }
