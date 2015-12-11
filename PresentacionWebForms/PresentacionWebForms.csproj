@@ -38,7 +38,14 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\packages\AjaxControlToolkit.15.1.4.0\lib\net40\AjaxControlToolkit.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="RestSharp, Version=105.2.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\RestSharp.105.2.3\lib\net45\RestSharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -97,12 +104,18 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
-    <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="CenfotecSite\Evaluations\create.aspx" />
+    <Content Include="CenfotecSite\Evaluations\List.aspx" />
     <Content Include="CenfotecSite\index.aspx" />
+    <Content Include="CenfotecSite\Questions\Form.aspx" />
+    <Content Include="CenfotecSite\Kpi\kpiProductos.aspx" />
+    <Content Include="CenfotecSite\Kpi\KpiProspectos.aspx" />
+    <Content Include="CenfotecSite\Questions\List.aspx" />
     <Content Include="Contact.aspx" />
+    <Content Include="Content\AdminLTE.min.css" />
     <Content Include="Content\animate.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -118,7 +131,10 @@
     <Content Include="Content\img\portfolio\4.jpg" />
     <Content Include="Content\img\portfolio\5.jpg" />
     <Content Include="Content\img\portfolio\6.jpg" />
+    <Content Include="Content\jquery-jvectormap-1.2.2.css" />
+    <Content Include="Content\jquery-ui.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="Content\_all-skins.css" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -163,24 +179,53 @@
     <Content Include="Content\less\mixins.less" />
     <Content Include="Content\less\variables.less" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <None Include="Resources\calendar-icon.gif" />
+    <Content Include="Scripts\app.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap3-wysihtml5.all.min.js" />
     <Content Include="Scripts\cbpAnimatedHeader.js" />
     <Content Include="Scripts\classie.js" />
+    <Content Include="Scripts\createEvaluation.js" />
     <Content Include="Scripts\creative.js" />
+    <Content Include="Scripts\fastclick.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jQuery-2.1.4.min.js" />
+    <Content Include="Scripts\jquery-jvectormap-1.2.2.min.js" />
+    <Content Include="Scripts\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
     <Content Include="Scripts\jquery.easing.min.js" />
     <Content Include="Scripts\jquery.fittext.js" />
     <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\jquery.slimscroll.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\WebForms\app.min.js" />
+    <Content Include="Scripts\WebForms\bootstrap.js" />
+    <Content Include="Scripts\WebForms\bootstrap.min.js" />
+    <Content Include="Scripts\WebForms\bootstrap3-wysihtml5.all.min.js" />
+    <Content Include="Scripts\WebForms\cbpAnimatedHeader.js" />
+    <Content Include="Scripts\WebForms\classie.js" />
+    <Content Include="Scripts\WebForms\creative.js" />
     <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\fastclick.min.js" />
     <Content Include="Scripts\WebForms\Focus.js" />
     <Content Include="Scripts\WebForms\GridView.js" />
+    <None Include="Scripts\WebForms\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\WebForms\jquery-1.10.2.js" />
+    <Content Include="Scripts\WebForms\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\WebForms\jQuery-2.1.4.min.js" />
+    <Content Include="Scripts\WebForms\jquery-jvectormap-1.2.2.min.js" />
+    <Content Include="Scripts\WebForms\jquery-jvectormap-world-mill-en.js" />
+    <Content Include="Scripts\WebForms\jquery.easing.min.js" />
+    <Content Include="Scripts\WebForms\jquery.fittext.js" />
+    <Content Include="Scripts\WebForms\jquery.js" />
+    <Content Include="Scripts\WebForms\jquery.slimscroll.min.js" />
     <Content Include="Scripts\WebForms\Menu.js" />
     <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\modernizr-2.6.2.js" />
     <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
     <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
     <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
@@ -192,11 +237,15 @@
     <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
     <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
     <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\respond.js" />
+    <Content Include="Scripts\WebForms\respond.min.js" />
     <Content Include="Scripts\WebForms\SmartNav.js" />
     <Content Include="Scripts\WebForms\TreeView.js" />
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="Scripts\WebForms\wow.min.js" />
+    <None Include="Scripts\WebForms\_references.js" />
     <Content Include="Scripts\wow.min.js" />
     <Content Include="Scripts\_references.js" />
     <Content Include="Default.aspx" />
@@ -209,6 +258,7 @@
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Site.Mobile.Master" />
+    <Content Include="Scripts\WebForms\jquery-1.10.2.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -226,12 +276,54 @@
       <DependentUpon>About.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="CenfotecSite\Evaluations\create.aspx.cs">
+      <DependentUpon>create.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CenfotecSite\Evaluations\create.aspx.designer.cs">
+      <DependentUpon>create.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CenfotecSite\Evaluations\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CenfotecSite\Evaluations\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CenfotecSite\index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="CenfotecSite\index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CenfotecSite\Questions\Form.aspx.cs">
+      <DependentUpon>Form.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CenfotecSite\Questions\Form.aspx.designer.cs">
+      <DependentUpon>Form.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CenfotecSite\Kpi\kpiProductos.aspx.cs">
+      <DependentUpon>kpiProductos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CenfotecSite\Kpi\kpiProductos.aspx.designer.cs">
+      <DependentUpon>kpiProductos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CenfotecSite\Kpi\KpiProspectos.aspx.cs">
+      <DependentUpon>KpiProspectos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CenfotecSite\Kpi\KpiProspectos.aspx.designer.cs">
+      <DependentUpon>KpiProspectos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CenfotecSite\Questions\List.aspx.cs">
+      <DependentUpon>List.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CenfotecSite\Questions\List.aspx.designer.cs">
+      <DependentUpon>List.aspx</DependentUpon>
     </Compile>
     <Compile Include="Contact.aspx.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
@@ -250,7 +342,17 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Evaluation.cs" />
+    <Compile Include="Models\Product.cs" />
+    <Compile Include="Models\Question.cs" />
+    <Compile Include="Models\Template.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -273,7 +375,12 @@
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -285,7 +392,7 @@
     <VisualStudio>
       <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
         <WebProjectProperties>
-          <UseIIS>True</UseIIS>
+          <UseIIS>False</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>50289</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>

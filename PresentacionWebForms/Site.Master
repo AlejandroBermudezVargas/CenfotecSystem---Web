@@ -4,20 +4,24 @@
 
 <html lang="es">
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - Mi aplicación ASP.NET</title>
-
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <title><%: Page.Title %>|Cenfotec</title>
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
-
-    <webopt:bundlereference runat="server" path="~/Content/css" />
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
-
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="Content/jquery-jvectormap-1.2.2.css">
+    <link rel="stylesheet" href="Content/AdminLTE.min.css">
+    <link rel="stylesheet" href="Content/_all-skins.css">
+    <link rel="stylesheet" href="Content/Site.css">
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
 </head>
-<body>
+<body class="hold-transition skin-purple sidebar-mini">
     <form runat="server">
         <asp:ScriptManager runat="server">
             <Scripts>
@@ -36,38 +40,124 @@
                 <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
                 <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
                 <asp:ScriptReference Name="WebFormsBundle" />
+                <asp:ScriptReference Path="//code.jquery.com/jquery-1.10.2.js" />
+                <asp:ScriptReference Path="//code.jquery.com/ui/1.11.4/jquery-ui.js" />
+                <asp:ScriptReference Path="Scripts/bootstrap3-wysihtml5.all.min.js" />
+                <asp:ScriptReference Path="Scripts/jquery.slimscroll.min.js" />
+                <asp:ScriptReference Path="Scripts/fastclick.min.js" />
+                <asp:ScriptReference Path="Scripts/app.min.js" />
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
+        <div class="wrapper">
+            <header class="main-header">
+                <a href="#" class="logo">
+                    <span class="logo-mini">CFC</span>
+                    <span class="logo-lg">Cenfotec</span>
+                </a>
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <a href="#" class="sidebar-toggle" data-toggle="offcanvas" role="button">
+                        <span class="sr-only">Toggle navigation</span>
+                    </a>
+                    <div class="navbar-custom-menu">
+                        <ul class="nav navbar-nav">
+                            <li class="dropdown user user-menu">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                    <img src="http://loremflickr.com/320/240/abstract" class="user-image" alt="User Image">
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li class="user-header">
+                                        <img src="http://loremflickr.com/320/240/abstract" class="img-circle" alt="User Image">
+                                        <p>
+                                            Nombre de usuario - rol
+                                            <small>Fecha de nacimiento</small>
+                                        </p>
+                                    </li>
+                                    <li class="user-footer">
+                                        <div class="pull-right">
+                                            <a href="#" class="btn btn-default btn-flat">Cerrar sesion</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </header>
+            <aside class="main-sidebar">
+                <section class="sidebar">
+                    <div class="user-panel">
+                        <div class="pull-left image">
+                            <img src="http://loremflickr.com/160/160/abstract" class="img-circle" alt="User Image">
+                        </div>
+                        <div class="pull-left info">
+                            <p>Usuario logeado</p>
+                            <a href="#"><i class="fa fa-circle text-success"></i>Online</a>
+                        </div>
+                    </div>
 
-        <div class="navbar navbar-inverse navbar-fixed-top">
-            <div class="container">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="navbar-brand" runat="server" href="~/">Nombre de la aplicación</a>
-                </div>
-                <div class="navbar-collapse collapse">
-                    <ul class="nav navbar-nav">
-                        <li><a runat="server" href="~/">Inicio</a></li>
-                        <li><a runat="server" href="~/About">Acerca de</a></li>
-                        <li><a runat="server" href="~/Contact">Contacto</a></li>
+                    <ul class="sidebar-menu">
+                        <li class="header">Menu</li>
+                        <li class="treeview active">
+                            <a href="#">
+                                <i class="fa fa-home"></i>
+                                <span>Inicio</span>
+                            </a>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-edit"></i><span>Evaluaciones</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="../../CenfotecSite/Questions/List.aspx"><i class="fa fa-circle-o"></i>Preguntas</a></li>
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-pie-chart"></i>
+                                <span>KPI</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="#"><i class="fa fa-circle-o"></i>Crear KPI de ventas</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i>Crear KPI de prospectos</a></li>
+                                <li><a href="../../CenfotecSite/Kpi/kpiProductos.aspx"><i class="fa fa-circle-o"></i>Crear KPI de productos</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i>Crear KPI ganancias por ventas</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i>Crear KPI de evaluaciones</a></li>
+                            </ul>
+                        </li>
+                        <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-table"></i><span>Reportes</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="#"><i class="fa fa-circle-o"></i>Ganancias de agente</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i>Ventas agente por año</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i>Ganancias agente por año</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i>Reporte de evaluaciones</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i>Evaluacion por profesor</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i>Reporte de prospectos</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i>Origen de prospectos</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i>Reporte de eventos</a></li>
+                                <li><a href="#"><i class="fa fa-circle-o"></i>Reporte bitacora</a></li>
+
+                            </ul>
                     </ul>
+                </section>
+            </aside>
+            <div class="content-wrapper">
+                <div class="container body-content">
+                    <asp:ContentPlaceHolder ID="MainContent" runat="server">
+                        <%--AQUI VA SU CODIGO--%>
+                    </asp:ContentPlaceHolder>
                 </div>
             </div>
-        </div>
-        <div class="container body-content">
-            <asp:ContentPlaceHolder ID="MainContent" runat="server">
-            </asp:ContentPlaceHolder>
-            <hr />
-            <footer>
-                <p>&copy; <%: DateTime.Now.Year %> - Mi aplicación ASP.NET</p>
+            <footer class="main-footer">
+                <strong>Copyright &copy; 2015 <a href="https://www.ucenfotec.ac.cr">Cenfotec</a>.</strong> All rights reserved.
             </footer>
         </div>
-
     </form>
 </body>
 </html>
