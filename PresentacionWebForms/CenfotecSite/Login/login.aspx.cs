@@ -21,7 +21,7 @@ namespace PresentacionWebForms.CenfotecSite.Login
         {
             userName.Focus();
             mensajeError.Style.Add("display", "none");
-
+            mensajeError2.Style.Add("display", "none");
         }
 
         protected void Login(object sender, EventArgs e)
@@ -37,7 +37,7 @@ namespace PresentacionWebForms.CenfotecSite.Login
                 }
                 else
                 {
-                    mensajeError.Style.Remove("display");
+                    mensajeError2.Style.Remove("display");
                 }
             }
             else
