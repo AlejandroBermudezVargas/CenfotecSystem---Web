@@ -13,13 +13,18 @@
     <br />
     <section class="content">
         <div class="table-responsive">
-            <asp:GridView ID="GridEvaluationsData" CssClass="table table-striped table-hover" runat="server" AllowCustomPaging="True" AutoGenerateColumns="False" GridLines="None" >
+            <asp:GridView ID="GridEvaluationsData" CssClass="table table-striped table-hover" runat="server" AllowCustomPaging="True" AutoGenerateColumns="False" GridLines="None" OnRowEditing="GridEvaluationsData_RowEditing" >
                 <Columns>
-                    <asp:BoundField DataField="id_evaluacion" HeaderText="Id evaluacion"/>
-                    <asp:BoundField DataField="porcentaje_desactivacion" HeaderText="Evaluado" />
-                    <asp:CommandField ShowEditButton="True" ShowSelectButton="True"  HeaderText="Acciones"/>
+                    <asp:BoundField DataField="id_plantilla" HeaderText="ID" />
+                    <asp:BoundField DataField="nombre" HeaderText="Nombre"/>
+                    <asp:BoundField DataField="descripcion" HeaderText="Descripción" />
+                    <asp:CommandField ShowEditButton="True"  HeaderText="Accion" EditText="Editar"/>
                 </Columns>
             </asp:GridView>
+        </div>
+        <br />
+        <div class="pull-right">
+            <a href="create.aspx" class="btn btn-primary">Nueva plantilla</a>
         </div>
     </section>
 </asp:Content>
