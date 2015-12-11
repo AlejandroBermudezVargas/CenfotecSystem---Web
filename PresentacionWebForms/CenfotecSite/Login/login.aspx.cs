@@ -20,24 +20,33 @@ namespace PresentacionWebForms.CenfotecSite.Login
         protected void Page_Load(object sender, EventArgs e)
         {
             userName.Focus();
-            
+            mensajeError.Style.Add("display", "none");
+
         }
 
-    protected void Login(object sender, EventArgs e)
-    {
-        User user = UsersController.Login(userName.Text, password.Text);
-        if(user != null){
-            Session["User"] = user;
-            if (user.activo){
-                Response.Redirect("/Default.aspx", true);
+        protected void Login(object sender, EventArgs e)
+        {
+            User user = UsersController.Login(userName.Text, password.Text);
+
+            if (user != null)
+            {
+                Session["User"] = user;
+                if (user.activo)
+                {
+                    Response.Redirect("/Default.aspx", true);
+                }
+                else
+                {
+                    mensajeError.Style.Remove("display");
+                }
             }
             else
             {
-            
+                mensajeError.Style.Remove("display");
             }
-                        
-            } 
+
         }
+
     }
 }
   

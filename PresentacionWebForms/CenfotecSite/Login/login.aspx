@@ -28,5 +28,10 @@
         </div>
     </div>
 </div>
+    
+    <asp:Panel id="mensajeError" runat="server" CssClass="alert alert-warning">
+        <a href="#" class="close" data-dismiss="alert" aria-label="close" style="text-decoration:none">&times;</a>
+        <strong>Error!</strong> La combinación de Nombre de Usuario y Contraseña no es correcta.
+    </asp:Panel>
 </body>
 </html>
