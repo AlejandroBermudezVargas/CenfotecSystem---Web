@@ -5,8 +5,14 @@ using System.Web;
 
 namespace PresentacionWebForms.Models
 {
-    public class Kpi
+    public class KPI
     {
+        public KPI(string descripcion,  string indicador)
+        {
+            this.id_tipo = 1;
+            this.descripcion = descripcion;
+            this.indicador = indicador;
+        }
         public int id_kpi { get; set; }
         public int id_tipo { get; set; }
         public string descripcion { get; set; }

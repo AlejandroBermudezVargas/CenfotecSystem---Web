@@ -61,9 +61,9 @@ namespace PresentacionWebForms.CenfotecSite.Kpi
             {
                 Response.Redirect("CrearKpiVentasTotalesUsuario.aspx");
             }
-            else if (DropDownIndicadores.SelectedValue == "Monto Total Vendido") 
+            else if (DropDownIndicadores.SelectedValue == "Montos Totales") 
             {
-                calculateTotalMontoVentas();
+                Response.Redirect("CrearKpiVentasMontoTotal.aspx");
             }
 
         }

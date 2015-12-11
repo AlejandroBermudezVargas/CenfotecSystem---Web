@@ -9,12 +9,12 @@ namespace PresentacionWebForms.Models
     {
         public TipoKpi()
         {
-            this.kpis = new HashSet<Kpi>();
+            this.kpis = new HashSet<KPI>();
         }
     
         public int id_tipo { get; set; }
         public string nombre { get; set; }
 
-        public virtual ICollection<Kpi> kpis { get; set; }
+        public virtual ICollection<KPI> kpis { get; set; }
     }
 }

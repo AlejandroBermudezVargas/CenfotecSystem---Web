@@ -33,16 +33,16 @@ namespace PresentacionWebForms.CenfotecSite.Kpi
 
         private void loadUsuarios()
         {
-            RestClient client = new RestClient(ConfigurationManager.AppSettings["endpoint"]);
-            RestRequest request = new RestRequest("kpis", Method.GET);
-            var response = client.Execute(request) as RestResponse;
-            string json = response.Content;
-            List<Product> products = JsonConvert.DeserializeObject<List<Product>>(json);
+            //RestClient client = new RestClient(ConfigurationManager.AppSettings["endpoint"]);
+            //RestRequest request = new RestRequest("Users", Method.GET);
+            //var response = client.Execute(request) as RestResponse;
+            //string json = response.Content;
+            //List<Product> users = JsonConvert.DeserializeObject<List<User>>(json);
 
-            foreach (var product in products)
-            {
-                DropDownProductos.Items.Add(new ListItem(product.nombre));
-            }
+            //foreach (var user in users)
+            //{
+            //    dropDownSelectUsuario.Items.Add(new ListItem(user.nombre));
+            //}
         }
     }
 }
