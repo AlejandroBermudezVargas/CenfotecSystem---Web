@@ -1,4 +1,5 @@
-﻿using RestSharp;
+﻿using PresentacionWebForms.Models;
+using RestSharp;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -17,6 +18,7 @@ namespace PresentacionWebForms.CenfotecSite.Kpi
             {
 
                 loadIndicadoresVentas();
+                //generarTipoKpi();
             }
         }
 
@@ -35,24 +37,19 @@ namespace PresentacionWebForms.CenfotecSite.Kpi
             }
         }
 
-        private void calculateTotalVentas()
+        public void generarTipoKpi()
         {
+            string[] tipoKpi = { "Ventas", "Prospectos", "Vendedores" };
             RestClient client = new RestClient(ConfigurationManager.AppSettings["endpoint"]);
-            RestRequest request = new RestRequest("/Sales/getTotalVentas", Method.GET);
-            var response = client.Execute(request) as RestResponse;
-            string json = response.Content;
+            RestRequest request = new RestRequest("tipo_kpi", Method.POST);
+            request.RequestFormat = DataFormat.Json;
+            for (int i = 0; i < tipoKpi.Length; i++)
+            {
 
-            //ResultsData.Controls.Add(new Literal { Text = json });
-        }
-
-        private void calculateTotalMontoVentas()
-        {
-            RestClient client = new RestClient(ConfigurationManager.AppSettings["endpoint"]);
-            RestRequest request = new RestRequest("Sales/getTotalMontoVentas", Method.GET);
-            var response = client.Execute(request) as RestResponse;
-            string json = response.Content;
-
-            //ResultsData.Controls.Add(new Literal { Text = json }); to be remove
+                TipoKpi nuevoTipo = new TipoKpi(tipoKpi[i]);
+                request.AddObject(nuevoTipo);
+                var response = client.Execute(request) as RestResponse;
+            }
         }
 
         protected void generateKpiVentas_Click(object sender, EventArgs e)

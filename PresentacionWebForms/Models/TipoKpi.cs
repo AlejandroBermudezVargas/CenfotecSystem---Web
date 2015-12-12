@@ -11,6 +11,11 @@ namespace PresentacionWebForms.Models
         {
             this.kpis = new HashSet<KPI>();
         }
+        public TipoKpi(string nombre)
+        {
+            this.nombre = nombre;
+            this.kpis = new HashSet<KPI>();
+        }
     
         public int id_tipo { get; set; }
         public string nombre { get; set; }
