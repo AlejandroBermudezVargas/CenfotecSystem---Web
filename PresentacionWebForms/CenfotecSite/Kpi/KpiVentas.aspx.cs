@@ -25,9 +25,9 @@ namespace PresentacionWebForms.CenfotecSite.Kpi
         private void loadIndicadoresVentas() 
         {
             List<string> listIndicadores = new List<string>();
-            listIndicadores.Add("Ventas Totales");
+            listIndicadores.Add("Total de Ventas");
             listIndicadores.Add("Montos Totales");
-            listIndicadores.Add("Montos por Periodo");
+
 
             foreach (var indicador in listIndicadores)
             {
@@ -52,9 +52,9 @@ namespace PresentacionWebForms.CenfotecSite.Kpi
 
         protected void generateKpiVentas_Click(object sender, EventArgs e)
         {
-            if (DropDownIndicadores.SelectedValue == "Ventas Totales")
+            if (DropDownIndicadores.SelectedValue == "Total de Ventas")
             {
-                Response.Redirect("CrearKpiVentasTotalesUsuario.aspx");
+                Response.Redirect("CrearKpiVentasTotales.aspx");
             }
             else if (DropDownIndicadores.SelectedValue == "Montos Totales") 
             {

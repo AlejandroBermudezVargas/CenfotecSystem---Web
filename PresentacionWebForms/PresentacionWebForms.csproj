@@ -111,11 +111,13 @@
     <Content Include="CenfotecSite\Evaluations\List.aspx" />
     <Content Include="CenfotecSite\index.aspx" />
     <Content Include="CenfotecSite\Kpi\CrearKpiVentasMontoTotal.aspx" />
+    <Content Include="CenfotecSite\Kpi\CrearkpiVentasTotales.aspx" />
     <Content Include="CenfotecSite\Kpi\CrearKpiVentasTotalesUsuario.aspx" />
     <Content Include="CenfotecSite\Kpi\IndexKpiVentas.aspx" />
     <Content Include="CenfotecSite\Kpi\KpiVentas.aspx" />
     <Content Include="CenfotecSite\Kpi\ListarKpiVentas.aspx" />
     <Content Include="CenfotecSite\Kpi\ResultadosKpisVentasMontoTotal.aspx" />
+    <Content Include="CenfotecSite\Kpi\ResultadosKpiVentasTotales.aspx" />
     <Content Include="CenfotecSite\Questions\Form.aspx" />
     <Content Include="CenfotecSite\Kpi\kpiProductos.aspx" />
     <Content Include="CenfotecSite\Kpi\KpiProspectos.aspx" />
@@ -312,6 +314,13 @@
     <Compile Include="CenfotecSite\Kpi\CrearKpiVentasMontoTotal.aspx.designer.cs">
       <DependentUpon>CrearKpiVentasMontoTotal.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CenfotecSite\Kpi\CrearkpiVentasTotales.aspx.cs">
+      <DependentUpon>CrearkpiVentasTotales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CenfotecSite\Kpi\CrearkpiVentasTotales.aspx.designer.cs">
+      <DependentUpon>CrearkpiVentasTotales.aspx</DependentUpon>
+    </Compile>
     <Compile Include="CenfotecSite\Kpi\CrearKpiVentasTotalesUsuario.aspx.cs">
       <DependentUpon>CrearKpiVentasTotalesUsuario.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -346,6 +355,13 @@
     </Compile>
     <Compile Include="CenfotecSite\Kpi\ResultadosKpisVentasMontoTotal.aspx.designer.cs">
       <DependentUpon>ResultadosKpisVentasMontoTotal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CenfotecSite\Kpi\ResultadosKpiVentasTotales.aspx.cs">
+      <DependentUpon>ResultadosKpiVentasTotales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CenfotecSite\Kpi\ResultadosKpiVentasTotales.aspx.designer.cs">
+      <DependentUpon>ResultadosKpiVentasTotales.aspx</DependentUpon>
     </Compile>
     <Compile Include="CenfotecSite\Questions\Form.aspx.cs">
       <DependentUpon>Form.aspx</DependentUpon>
