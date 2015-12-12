@@ -10,33 +10,33 @@
 namespace PresentacionWebForms.CenfotecSite.Evaluations {
     
     
-    public partial class List {
+    public partial class create1 {
         
         /// <summary>
-        /// id_plantilla control.
+        /// stlProfesores control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HiddenField id_plantilla;
+        protected global::System.Web.UI.WebControls.DropDownList stlProfesores;
         
         /// <summary>
-        /// lblMensajeListaVacia control.
+        /// txtPorcentaje control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl lblMensajeListaVacia;
+        protected global::System.Web.UI.WebControls.TextBox txtPorcentaje;
         
         /// <summary>
-        /// GridEvaluationsData control.
+        /// sltCurso control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridEvaluationsData;
+        protected global::System.Web.UI.WebControls.DropDownList sltCurso;
     }
 }

@@ -21,5 +21,7 @@ namespace PresentacionWebForms.Models
         public string password { get; set; }
         public bool activo { get; set; }
         public int id_rol { get; set; }
+
+        public virtual ICollection<Product> productos { get; set; }
     }
 }

@@ -23,7 +23,7 @@ namespace PresentacionWebForms.CenfotecSite.Evaluations
             }
 
             Session["IdTemplateEdit"] = null;
-
+            Session["IdSelectedTemplate"] = null;
             bindData();
         }
 
@@ -68,6 +68,12 @@ namespace PresentacionWebForms.CenfotecSite.Evaluations
             Session["IdTemplateEdit"] = GridEvaluationsData.Rows[e.NewEditIndex].Cells[0].Text;
             Response.BufferOutput = true;
             Response.Redirect("../../CenfotecSite/Templates/create.aspx");
+        }
+
+        protected void GridEvaluationsData_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Session["IdSelectedTemplate"] = GridEvaluationsData.Rows[GridEvaluationsData.SelectedIndex].Cells[0].Text;
+            Response.Redirect("../../CenfotecSite/Evaluations/create.aspx");
         }
     }
 }

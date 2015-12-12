@@ -12,14 +12,15 @@
     </section>
     <br />
     <section class="content">
+        <asp:HiddenField  ID="id_plantilla" Value="" runat="server"/>
         <div class="table-responsive">
             <h3 id="lblMensajeListaVacia" class="text-danger" runat="server">No hay plantillas para mostrar</h3>
-            <asp:GridView ID="GridEvaluationsData" CssClass="table table-striped table-hover" runat="server" AllowCustomPaging="True" AutoGenerateColumns="False" GridLines="None" OnRowEditing="GridEvaluationsData_RowEditing" >
+            <asp:GridView ID="GridEvaluationsData" CssClass="table table-striped table-hover" runat="server" AllowCustomPaging="True" AutoGenerateColumns="False" GridLines="None" OnRowEditing="GridEvaluationsData_RowEditing" OnSelectedIndexChanged="GridEvaluationsData_SelectedIndexChanged" >
                 <Columns>
                     <asp:BoundField DataField="id_plantilla" HeaderText="ID" />
                     <asp:BoundField DataField="nombre" HeaderText="Nombre"/>
                     <asp:BoundField DataField="descripcion" HeaderText="Descripción" />
-                    <asp:CommandField ShowEditButton="True"  HeaderText="Accion" EditText="Editar"/>
+                    <asp:CommandField ShowEditButton="True" ShowSelectButton="true" SelectText="Enviar"  HeaderText="Accion" EditText="Editar"/>
                 </Columns>
             </asp:GridView>
         </div>
