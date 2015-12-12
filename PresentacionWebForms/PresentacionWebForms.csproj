@@ -112,6 +112,7 @@
     <Content Include="CenfotecSite\index.aspx" />
     <Content Include="CenfotecSite\Kpi\CrearKpiVentasMontoTotal.aspx" />
     <Content Include="CenfotecSite\Kpi\CrearKpiVentasTotalesUsuario.aspx" />
+    <Content Include="CenfotecSite\Kpi\IndexKpiVentas.aspx" />
     <Content Include="CenfotecSite\Kpi\KpiVentas.aspx" />
     <Content Include="CenfotecSite\Kpi\ListarKpiVentas.aspx" />
     <Content Include="CenfotecSite\Kpi\ResultadosKpisVentasMontoTotal.aspx" />
@@ -317,6 +318,13 @@
     </Compile>
     <Compile Include="CenfotecSite\Kpi\CrearKpiVentasTotalesUsuario.aspx.designer.cs">
       <DependentUpon>CrearKpiVentasTotalesUsuario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CenfotecSite\Kpi\IndexKpiVentas.aspx.cs">
+      <DependentUpon>IndexKpiVentas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CenfotecSite\Kpi\IndexKpiVentas.aspx.designer.cs">
+      <DependentUpon>IndexKpiVentas.aspx</DependentUpon>
     </Compile>
     <Compile Include="CenfotecSite\Kpi\KpiVentas.aspx.cs">
       <DependentUpon>KpiVentas.aspx</DependentUpon>

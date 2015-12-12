@@ -11,7 +11,9 @@
     </section>
     <br />
     <section class="content">
-        <div class="table-responsive">        
+        <div class="table-responsive">
+            <asp:Panel ID="pnlMensajeExito" runat="server" CssClass="alert-success" Visible="False">El Kpi se genero correctamente</asp:Panel>  
+            <asp:Panel ID="pnlMensajeError" runat="server" CssClass="alert-danger" Visible="False">Error en la creacion del Kpi</asp:Panel>           
             <table style="width:100%;" class="table borderless">
                 <tr>
                     <td style="width: 115px">Meta&nbsp; Monto:</td>

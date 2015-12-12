@@ -28,6 +28,15 @@ namespace PresentacionWebForms.CenfotecSite.Kpi
             request.AddObject(nuevoKpi);
             var response = client.Execute(request) as RestResponse;
             string json = response.Content;
+
+            if (response.ResponseStatus != ResponseStatus.Error)
+            {
+                pnlMensajeExito.Visible = true;
+            }
+            else
+            {
+                pnlMensajeError.Visible = true;
+            }
         }
     }
 }

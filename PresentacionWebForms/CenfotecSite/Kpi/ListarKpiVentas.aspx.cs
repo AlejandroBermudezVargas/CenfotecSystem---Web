@@ -36,7 +36,7 @@ namespace PresentacionWebForms.CenfotecSite.Kpi
             var response = client.Execute(request) as RestResponse;
             string json = response.Content;
             List<KPI> kpis = JsonConvert.DeserializeObject<List<KPI>>(json);
-            if (kpis.Count > 0)
+            if (kpis != null)
             {
                 msjListaVacia.Style.Add("display", "none");
 

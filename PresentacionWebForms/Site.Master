@@ -123,7 +123,7 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="../../CenfotecSite/Kpi/kpiVentas.aspx"><i class="fa fa-circle-o"></i>KPI de ventas</a></li>
+                                <li><a href="../../CenfotecSite/Kpi/IndexKpiVentas.aspx"><i class="fa fa-circle-o"></i>KPI de ventas</a></li>
                                 <li><a href="../../CenfotecSite/Kpi/kpiProspectos.aspx""><i class="fa fa-circle-o"></i>KPI de prospectos</a></li>
                                 <li><a href="../../CenfotecSite/Kpi/kpiProductos.aspx"><i class="fa fa-circle-o"></i>KPI de productos</a></li>
                                 <li><a href="#"><i class="fa fa-circle-o"></i>KPI ganancias por ventas</a></li>

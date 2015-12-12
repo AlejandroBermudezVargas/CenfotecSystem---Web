@@ -15,8 +15,8 @@
         <asp:GridView ID="GridKpisData" CssClass="table table-striped table-hover" runat="server" DataKeyNames="id_kpi" OnRowCommand="FireRowCommand"   AutoGenerateColumns="false">
             <Columns>
                 <asp:BoundField DataField="id_kpi" HeaderText="Id"/>
-                <asp:BoundField DataField="indicador" HeaderText="Indicador" />
-                <asp:BoundField DataField="descripcion" HeaderText="Descripcion" />
+                <asp:BoundField DataField="descripcion" HeaderText="Indicador" />
+                <asp:BoundField DataField="indicador" HeaderText="Descripcion" />
                 <asp:TemplateField HeaderText="Ver Resultados">
                     <ItemTemplate>
                         <asp:LinkButton ID="btnVerResultados" runat="server" CommandArgument='<%# Eval("id_kpi") %>'
