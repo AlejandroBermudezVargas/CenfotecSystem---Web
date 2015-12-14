@@ -91,20 +91,20 @@
                             <img src="http://loremflickr.com/160/160/abstract" class="img-circle" alt="User Image">
                         </div>
                         <div class="pull-left info">
-                            <p>Usuario logeado</p>
+                            <p runat="server" id="UserLoged">Usuario logeado</p>
                             <a href="#"><i class="fa fa-circle text-success"></i>Online</a>
                         </div>
                     </div>
 
                     <ul class="sidebar-menu">
                         <li class="header">Menu</li>
-                        <a runat="server" href="#" ID="botonMenuInicio">
-                            <a href="#">
+                        <li class="treeview active">
+                            <a runat="server" href="#" ID="botonMenuInicio">
                                 <i class="fa fa-home"></i>
                                 <span>Inicio</span>
                             </a>
-                        </a>
-                        <li class="treeview">
+                        </li>
+                        <li class="treeview" runat="server" id="botonMenuEvaluaciones" visible="false">
                             <a href="#">
                                 <i class="fa fa-edit"></i><span>Evaluaciones</span>
                                 <i class="fa fa-angle-left pull-right"></i>
@@ -116,7 +116,7 @@
                                 <li><a href="../../CenfotecSite/Questions/List.aspx"><i class="fa fa-circle-o"></i>Preguntas</a></li>
                             </ul>
                         </li>
-                        <li class="treeview">
+                        <li class="treeview" runat="server" id="botonMenuKpis" visible="false">
                             <a href="#">
                                 <i class="fa fa-pie-chart"></i>
                                 <span>KPI</span>
@@ -130,7 +130,7 @@
                                 <li><a href="#"><i class="fa fa-circle-o"></i>KPI de evaluaciones</a></li>
                             </ul>
                         </li>
-                        <li class="treeview">
+                        <li class="treeview" runat="server" id="botonMenuReportes" visible="false">
                             <a href="#">
                                 <i class="fa fa-table"></i><span>Reportes</span>
                                 <i class="fa fa-angle-left pull-right"></i>
@@ -147,7 +147,9 @@
                                 <li><a href="#"><i class="fa fa-circle-o"></i>Reporte bitacora</a></li>
 
                             </ul>
+                            </li>
                     </ul>
+                    
                 </section>
             </aside>
             <div class="content-wrapper">

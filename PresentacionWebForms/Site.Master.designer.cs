@@ -31,6 +31,15 @@ namespace PresentacionWebForms {
         protected global::System.Web.UI.WebControls.LinkButton logOut;
         
         /// <summary>
+        /// UserLoged control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl UserLoged;
+        
+        /// <summary>
         /// botonMenuInicio control.
         /// </summary>
         /// <remarks>
@@ -38,6 +47,33 @@ namespace PresentacionWebForms {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.HtmlControls.HtmlAnchor botonMenuInicio;
+        
+        /// <summary>
+        /// botonMenuEvaluaciones control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl botonMenuEvaluaciones;
+        
+        /// <summary>
+        /// botonMenuKpis control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl botonMenuKpis;
+        
+        /// <summary>
+        /// botonMenuReportes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl botonMenuReportes;
         
         /// <summary>
         /// MainContent control.
