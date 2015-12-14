@@ -7,45 +7,45 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace PresentacionWebForms {
+namespace PresentacionWebForms.CenfotecSite.Login {
     
     
-    public partial class SiteMaster {
+    public partial class login {
         
         /// <summary>
-        /// datosUser control.
+        /// userName control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlGenericControl datosUser;
+        protected global::System.Web.UI.WebControls.TextBox userName;
         
         /// <summary>
-        /// logOut control.
+        /// password control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton logOut;
+        protected global::System.Web.UI.WebControls.TextBox password;
         
         /// <summary>
-        /// botonMenuInicio control.
+        /// mensajeError control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlAnchor botonMenuInicio;
+        protected global::System.Web.UI.WebControls.Panel mensajeError;
         
         /// <summary>
-        /// MainContent control.
+        /// mensajeError2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.ContentPlaceHolder MainContent;
+        protected global::System.Web.UI.WebControls.Panel mensajeError2;
     }
 }

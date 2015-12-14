@@ -68,14 +68,14 @@
                                 <ul class="dropdown-menu">
                                     <li class="user-header">
                                         <img src="http://loremflickr.com/320/240/abstract" class="img-circle" alt="User Image">
-                                        <p>
+                                        <p runat="server" id="datosUser">
                                             Nombre de usuario - rol
                                             <small>Fecha de nacimiento</small>
                                         </p>
                                     </li>
                                     <li class="user-footer">
                                         <div class="pull-right">
-                                            <a href="#" class="btn btn-default btn-flat">Cerrar sesion</a>
+                                            <asp:LinkButton runat="server" class="btn btn-default btn-flat" onClick="cerrarSesion" ID="logOut">Cerrar sesion</asp:LinkButton>
                                         </div>
                                     </li>
                                 </ul>
@@ -98,12 +98,12 @@
 
                     <ul class="sidebar-menu">
                         <li class="header">Menu</li>
-                        <li class="treeview active">
+                        <a runat="server" href="#" ID="botonMenuInicio">
                             <a href="#">
                                 <i class="fa fa-home"></i>
                                 <span>Inicio</span>
                             </a>
-                        </li>
+                        </a>
                         <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-edit"></i><span>Evaluaciones</span>
