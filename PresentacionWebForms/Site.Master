@@ -1,4 +1,4 @@
-﻿<%@ master language="C#" autoeventwireup="true" codebehind="Site.master.cs" inherits="PresentacionWebForms.SiteMaster" %>
+﻿<%@ master language="C#" autoeventwireup="true" codebehind="Site.Master.cs" inherits="PresentacionWebForms.SiteMaster" %>
 
 <!DOCTYPE html>
 
@@ -68,14 +68,14 @@
                                 <ul class="dropdown-menu">
                                     <li class="user-header">
                                         <img src="http://loremflickr.com/320/240/abstract" class="img-circle" alt="User Image">
-                                        <p>
+                                        <p runat="server" id="datosUser">
                                             Nombre de usuario - rol
                                             <small>Fecha de nacimiento</small>
                                         </p>
                                     </li>
                                     <li class="user-footer">
                                         <div class="pull-right">
-                                            <a href="#" class="btn btn-default btn-flat">Cerrar sesion</a>
+                                            <asp:LinkButton runat="server" class="btn btn-default btn-flat" onClick="cerrarSesion" ID="logOut">Cerrar sesion</asp:LinkButton>
                                         </div>
                                     </li>
                                 </ul>
@@ -91,7 +91,7 @@
                             <img src="http://loremflickr.com/160/160/abstract" class="img-circle" alt="User Image">
                         </div>
                         <div class="pull-left info">
-                            <p>Usuario logeado</p>
+                            <p runat="server" id="UserLoged">Usuario logeado</p>
                             <a href="#"><i class="fa fa-circle text-success"></i>Online</a>
                         </div>
                     </div>
@@ -99,38 +99,36 @@
                     <ul class="sidebar-menu">
                         <li class="header">Menu</li>
                         <li class="treeview active">
-                            <a href="#">
+                            <a runat="server" href="#" ID="botonMenuInicio">
                                 <i class="fa fa-home"></i>
                                 <span>Inicio</span>
                             </a>
                         </li>
-                        <li class="treeview">
+                        <li class="treeview" runat="server" id="botonMenuEvaluaciones" visible="false">
                             <a href="#">
                                 <i class="fa fa-edit"></i><span>Evaluaciones</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="../../CenfotecSite/Evaluations/List.aspx"><i class="fa fa-circle-o"></i>Plantillas</a></li>
-                            </ul>
-                            <ul class="treeview-menu">
-                                <li><a href="../../CenfotecSite/Questions/List.aspx"><i class="fa fa-circle-o"></i>Preguntas</a></li>
+                                <li><asp:LinkButton runat= "server" onClick='goToEvaluationsListPage'><i class="fa fa-circle-o"></i>Plantillas</asp:LinkButton></li>
+                                <li><asp:LinkButton runat= "server" onClick='goToQuestionsListPage'><i class="fa fa-circle-o"></i>Preguntas</asp:LinkButton></li>
                             </ul>
                         </li>
-                        <li class="treeview">
+                        <li class="treeview" runat="server" id="botonMenuKpis" visible="false">
                             <a href="#">
                                 <i class="fa fa-pie-chart"></i>
                                 <span>KPI</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="../../CenfotecSite/Kpi/IndexKpiVentas.aspx"><i class="fa fa-circle-o"></i>KPI de ventas</a></li>
-                                <li><a href="../../CenfotecSite/Kpi/kpiProspectos.aspx""><i class="fa fa-circle-o"></i>KPI de prospectos</a></li>
-                                <li><a href="../../CenfotecSite/Kpi/kpiProductos.aspx"><i class="fa fa-circle-o"></i>KPI de productos</a></li>
+                                <li><asp:LinkButton runat= "server" onClick='goToSalesKpiPage'><i class="fa fa-circle-o"></i>KPI de ventas</asp:LinkButton></li>
+                                <li><asp:LinkButton runat= "server" onClick='goToProductsKpiPage'><i class="fa fa-circle-o"></i>KPI de prospectos</asp:LinkButton></li>
+                                <li><asp:LinkButton runat= "server" onClick='goToProspectusKpiPage'><i class="fa fa-circle-o"></i>KPI de productos</asp:LinkButton></li>
                                 <li><a href="#"><i class="fa fa-circle-o"></i>KPI ganancias por ventas</a></li>
                                 <li><a href="#"><i class="fa fa-circle-o"></i>KPI de evaluaciones</a></li>
                             </ul>
                         </li>
-                        <li class="treeview">
+                        <li class="treeview" runat="server" id="botonMenuReportes" visible="false">
                             <a href="#">
                                 <i class="fa fa-table"></i><span>Reportes</span>
                                 <i class="fa fa-angle-left pull-right"></i>
@@ -145,9 +143,10 @@
                                 <li><a href="#"><i class="fa fa-circle-o"></i>Origen de prospectos</a></li>
                                 <li><a href="#"><i class="fa fa-circle-o"></i>Reporte de eventos</a></li>
                                 <li><a href="#"><i class="fa fa-circle-o"></i>Reporte bitacora</a></li>
-
                             </ul>
+                            </li>
                     </ul>
+                    
                 </section>
             </aside>
             <div class="content-wrapper">
