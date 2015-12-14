@@ -1,4 +1,4 @@
-﻿<%@ master language="C#" autoeventwireup="true" codebehind="Site.master.cs" inherits="PresentacionWebForms.SiteMaster" %>
+﻿<%@ master language="C#" autoeventwireup="true" codebehind="Site.Master.cs" inherits="PresentacionWebForms.SiteMaster" %>
 
 <!DOCTYPE html>
 
@@ -110,10 +110,10 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="../../CenfotecSite/Evaluations/List.aspx"><i class="fa fa-circle-o"></i>Plantillas</a></li>
+                                <li><asp:LinkButton runat= "server" onClick='goToEvaluationsListPage'><i class="fa fa-circle-o"></i>Plantillas</asp:LinkButton></li>
                             </ul>
                             <ul class="treeview-menu">
-                                <li><a href="../../CenfotecSite/Questions/List.aspx"><i class="fa fa-circle-o"></i>Preguntas</a></li>
+                                <li><asp:LinkButton runat= "server" onClick='goToQuestionsListPage'><i class="fa fa-circle-o"></i>Preguntas</asp:LinkButton></li>
                             </ul>
                         </li>
                         <li class="treeview" runat="server" id="botonMenuKpis" visible="false">
@@ -123,9 +123,9 @@
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
-                                <li><a href="../../CenfotecSite/Kpi/IndexKpiVentas.aspx"><i class="fa fa-circle-o"></i>KPI de ventas</a></li>
-                                <li><a href="../../CenfotecSite/Kpi/kpiProspectos.aspx""><i class="fa fa-circle-o"></i>KPI de prospectos</a></li>
-                                <li><a href="../../CenfotecSite/Kpi/kpiProductos.aspx"><i class="fa fa-circle-o"></i>KPI de productos</a></li>
+                                <li><asp:LinkButton runat= "server" onClick='goToSalesKpiPage'><i class="fa fa-circle-o"></i>KPI de ventas</asp:LinkButton></li>
+                                <li><asp:LinkButton runat= "server" onClick='goToProductsKpiPage'><i class="fa fa-circle-o"></i>KPI de prospectos</asp:LinkButton></li>
+                                <li><asp:LinkButton runat= "server" onClick='goToProspectusKpiPage'><i class="fa fa-circle-o"></i>KPI de productos</asp:LinkButton></li>
                                 <li><a href="#"><i class="fa fa-circle-o"></i>KPI ganancias por ventas</a></li>
                                 <li><a href="#"><i class="fa fa-circle-o"></i>KPI de evaluaciones</a></li>
                             </ul>

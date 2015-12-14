@@ -36,9 +36,34 @@ namespace PresentacionWebForms
         protected void cerrarSesion(object sender, EventArgs e)
         {
             Session.Abandon();
-            Response.Redirect("CenfotecSite/Login/Login.aspx");
-
+            Response.Redirect("~/CenfotecSite/Login/Login.aspx");
         }
+
+        protected void goToQuestionsListPage(object sender, EventArgs e)
+        {
+            Response.Redirect("~/CenfotecSite/Questions/List.aspx");
+        }
+
+        protected void goToEvaluationsListPage(object sender, EventArgs e)
+        {
+            Response.Redirect("~/CenfotecSite/Evaluations/List.aspx");
+        }
+
+        protected void goToSalesKpiPage(object sender, EventArgs e)
+        {
+            Response.Redirect("~/CenfotecSite/Kpi/IndexKpiVentas.aspx");
+        }
+
+        protected void goToProductsKpiPage(object sender, EventArgs e)
+        {
+            Response.Redirect("~/CenfotecSite/Kpi/kpiProductos.aspx");
+        }
+
+        protected void goToProspectusKpiPage(object sender, EventArgs e)
+        {
+            Response.Redirect("~/CenfotecSite/Kpi/kpiProspectos.aspx");
+        }
+
 
         protected void LoadMenu()
         {
