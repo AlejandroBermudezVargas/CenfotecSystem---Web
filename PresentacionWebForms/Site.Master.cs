@@ -83,9 +83,6 @@ namespace PresentacionWebForms
                         case "evaluaciones":
                             botonMenuEvaluaciones.Visible = true;
                             break;
-                        case "preguntas":
-                            botonMenuEvaluaciones.Visible = true;
-                            break;
                     }
                 }
 

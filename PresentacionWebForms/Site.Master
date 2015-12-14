@@ -111,8 +111,6 @@
                             </a>
                             <ul class="treeview-menu">
                                 <li><asp:LinkButton runat= "server" onClick='goToEvaluationsListPage'><i class="fa fa-circle-o"></i>Plantillas</asp:LinkButton></li>
-                            </ul>
-                            <ul class="treeview-menu">
                                 <li><asp:LinkButton runat= "server" onClick='goToQuestionsListPage'><i class="fa fa-circle-o"></i>Preguntas</asp:LinkButton></li>
                             </ul>
                         </li>
@@ -145,7 +143,6 @@
                                 <li><a href="#"><i class="fa fa-circle-o"></i>Origen de prospectos</a></li>
                                 <li><a href="#"><i class="fa fa-circle-o"></i>Reporte de eventos</a></li>
                                 <li><a href="#"><i class="fa fa-circle-o"></i>Reporte bitacora</a></li>
-
                             </ul>
                             </li>
                     </ul>

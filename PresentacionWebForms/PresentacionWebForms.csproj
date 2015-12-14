@@ -188,6 +188,8 @@
     <Content Include="Content\less\variables.less" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <None Include="Resources\calendar-icon.gif" />
+    <Content Include="Resources\logoU.ico" />
+    <Content Include="Resources\logoU.png" />
     <Content Include="Scripts\app.min.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
